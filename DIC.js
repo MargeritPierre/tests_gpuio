@@ -162,7 +162,7 @@ const gradientProgram = new GPUProgram(composer, {
     out vec2 out_grad;
 
     float der(sampler2D fr, vec2 step) {
-      float d = 0.5*(texture(fr,v_uv+step,0).x - texture(fr,v_uv-step).x);
+      float d = 0.5*(texture(fr,v_uv+step).x - texture(fr,v_uv-step).x);
       return d;
     }
 
